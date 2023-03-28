@@ -7,6 +7,7 @@ function SideBar() {
     { label: 'Buttons', path: '/buttons' },
     { label: 'Modal', path: '/modal' },
     { label: 'Table', path: '/table' },
+    { label: 'Counter', path: '/counter' },
   ];
 
   const renderedLinks = links.map(link => {
@@ -14,8 +15,8 @@ function SideBar() {
       <Link
         key={link.label}
         to={link.path}
-        className='mb-3'
-        activeClassName='font-bold border-l-4 border-blue-500 pl-2'
+        className="mb-3"
+        activeClassName="font-bold border-l-4 border-blue-500 pl-2"
       >
         {link.label}
       </Link>
@@ -23,7 +24,7 @@ function SideBar() {
   });
 
   return (
-    <div className='hide-scrollbar sticky top-0 overflow-y-scroll flex flex-col items-start'>
+    <div className="hide-scrollbar sticky top-0 overflow-y-scroll flex flex-col items-start">
       {renderedLinks}
     </div>
   );
